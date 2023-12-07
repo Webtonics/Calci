@@ -1,16 +1,44 @@
-# nonsense
+# Calci App
 
-A new Flutter project.
+Welcome to the Calci App! This application provides a set of handy calculators to assist you with various digital marketing and advertising tasks.
+
+## Features
+
+- **PPC Calculator:** Quickly estimate your Pay-Per-Click (PPC) campaign costs, including budget allocation, click-through rate, and impressions.
+
+- **AdMob Calculator:** Calculate revenue and fill rate for your mobile apps using Google AdMob. Optimize your ad strategy with ease.
+
+- **many more to come:** 
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
+- Ensure you have flutter installed.
+- and you have any device to connect (can be emulator)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository: `git clone https://github.com/yourusername/calculator-collection.git`
+2. run flutter pub get: to download the packages
+3. run.
+   
+## Usage
+
+1. Open the app on your device.
+2. Choose the calculator you want to use.
+3. Input the required parameters.
+4. View the calculated results instantly.
+
+
+## Contributing
+
+We welcome contributions! If you'd like to add a new calculator or improve an existing one, please follow our [contribution guidelines](CONTRIBUTING.md).
+
+## Support
+
+If you encounter any issues or have questions, feel free to [open an issue](https://github.com/Webtonics/Calci/issues).
+
+## License
+
+This project is licensed under the Fair use Act 😂😂
