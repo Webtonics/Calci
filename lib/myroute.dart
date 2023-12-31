@@ -3,6 +3,7 @@ import 'package:nonsense/pages/help.dart';
 import 'package:nonsense/pages/home.dart';
 import 'package:nonsense/pages/settings.dart';
 
+
 class MyRouter extends StatefulWidget {
   const MyRouter({super.key});
 
@@ -22,7 +23,16 @@ class _MyRouterState extends State<MyRouter> {
       appBar: AppBar( backgroundColor: Colors.amber,
       title: const Text("CALCI", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, letterSpacing: 3.0),),),
 
-      body: pages[currentIndex],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Container(
+            decoration:  BoxDecoration( color: Colors.white, borderRadius: BorderRadius.circular(23)),
+            alignment: Alignment.center,
+            width: 400,
+            child: pages[currentIndex]),
+        ),
+      ),
 
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.amberAccent,
