@@ -50,69 +50,78 @@ class _AdmobCalculatorState extends State<AdmobCalculator> {
 
     }
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 230, 225, 225),
       appBar: AppBar(
         backgroundColor: Colors.amber,
         title: const Text("Admob Calculator", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-           Column(
-            children: [
-               Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _dailyUsers, helperText: "Daily app visitors",),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _cpmValue, helperText: 'CPM',),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _pageviewPerUser, helperText: 'Average pageviews per user',),
-            ),
-            ElevatedButton(onPressed: (){              
-              calculate();
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
+          child: Container(
+             decoration:  BoxDecoration( color: Colors.white, borderRadius: BorderRadius.circular(23)),
+              alignment: Alignment.center,
             
-            }, child: const Text("Calculate")),
-            ],
-           ),
-
-            Padding(
-             padding: const EdgeInsets.all(8.0),
-             child: Column(
+            width: 500,
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Column(
-                  children: [
-                    Text("\$ ${dailyEarnings.round().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
-                    const Text("Daily", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  ],
+               Column(
+                children: [
+                   Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _dailyUsers, helperText: "Daily app visitors",),
                 ),
-                spacer,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _cpmValue, helperText: 'CPM',),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _pageviewPerUser, helperText: 'Average pageviews per user',),
+                ),
+                ElevatedButton(onPressed: (){              
+                  calculate();
                 
-                Column(
+                }, child: const Text("Calculate")),
+                ],
+               ),
+          
+                Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text("\$ ${monthlyEarnings.round().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
-                    const Text("Monthly", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                    Column(
+                      children: [
+                        Text("\$ ${dailyEarnings.round().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
+                        const Text("Daily", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                      ],
+                    ),
+                    spacer,
+                    
+                    Column(
+                      children: [
+                        Text("\$ ${monthlyEarnings.round().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
+                        const Text("Monthly", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                      ],
+                    ),
+                    spacer,
+          
+                    Column(
+                      children: [
+                        Text("\$ ${yearlyEarnings.roundToDouble().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
+                        const Text("Yearly", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                      ],
+                    ),
+                    
                   ],
-                ),
-                spacer,
-
-                Column(
-                  children: [
-                    Text("\$ ${yearlyEarnings.roundToDouble().toString()}", style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w900),),
-                    const Text("Yearly", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                  ],
-                ),
+                 ),
+               )
                 
               ],
-             ),
-           )
-            
-          ],
+            ),
+          ),
         ),
       ),
     )

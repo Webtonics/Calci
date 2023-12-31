@@ -88,39 +88,48 @@ class _PCalculatorviewState extends State<PCalculatorview> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: const Color.fromARGB(255, 230, 225, 225),
       appBar: AppBar(
         backgroundColor: Colors.amber,
         title: const Text("PPC Calculator", style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),),
       ),
-      body:  Padding(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          
-          children: [
-            const Center(child: Text("Instructions")),
-      
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _incomePersale, helperText: "Income per sale"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _totalClicks, helperText: "Total number of clicks"),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _ctr, helperText: "Conversion ratio", ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: MyTextfield(controller: _avgCpc, helperText: "Average cost per click"),
-            ),
-      
-            ElevatedButton(onPressed: (){
+      body:  Center(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Container(
+            decoration:  BoxDecoration( color: Colors.white, borderRadius: BorderRadius.circular(23)),
+              alignment: Alignment.center,
+            
+            width: 500,
+            child: Column(
               
-              ppcCalculator(context);
-            }, child: const Text("Calculate")),
-          ],
+              children: [
+                const Center(child: Text("Instructions")),
+                
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _incomePersale, helperText: "Income per sale"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _totalClicks, helperText: "Total number of clicks"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _ctr, helperText: "Conversion ratio", ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: MyTextfield(controller: _avgCpc, helperText: "Average cost per click"),
+                ),
+                
+                ElevatedButton(onPressed: (){
+                  
+                  ppcCalculator(context);
+                }, child: const Text("Calculate")),
+              ],
+            ),
+          ),
         ),
       ),
     );

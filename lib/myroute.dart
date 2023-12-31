@@ -19,7 +19,7 @@ class _MyRouterState extends State<MyRouter> {
   @override
   Widget build(BuildContext context) {
     return   Scaffold(
-      backgroundColor: Colors.white54,
+      backgroundColor: const Color.fromARGB(255, 230, 225, 225),
       appBar: AppBar( backgroundColor: Colors.amber,
       title: const Text("CALCI", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, letterSpacing: 3.0),),),
 
